@@ -1,5 +1,4 @@
 import numpy as np
-from sklearn.neighbors import KNeighborsClassifier
 import tkinter
 import streamlit as st
 import plotly_express as px
