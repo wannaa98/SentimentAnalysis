@@ -1,6 +1,6 @@
 import numpy as np
 import streamlit as st
-import seaborn as sns
+
 import pandas as pd
 from textblob import TextBlob
 from wordcloud import WordCloud
