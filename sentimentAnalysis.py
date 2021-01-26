@@ -395,10 +395,10 @@ def main():
             subjectivity = st.write('Subjectivity:', doc._.sentiment.subjectivity)
 
             if result_sentiment > 0:
-                st.write("This is a Positive Message with" , round(doc._.sentiment.polarity,4)*100+46.6775569822,"% probability")
+                st.write("This is a Positive Message with" , round(doc._.sentiment.polarity,4)*100,"% probability")
                 st.balloons()
             else:
-               st.write("This is a Negative Message with" , round(doc._.sentiment.polarity,4)*-80+22.225643737,"% probability")
+               st.write("This is a Negative Message with" , round(doc._.sentiment.polarity,4)*-80,"% probability")
                st.balloons()
 
     else:
