@@ -1,5 +1,4 @@
 import numpy as np
-import _tkinter
 import streamlit as st
 import plotly_express as px
 import seaborn as sns
