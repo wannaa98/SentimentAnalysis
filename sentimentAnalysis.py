@@ -1,6 +1,4 @@
 import numpy as np
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.neighbors import KNeighborsClassifier
 import tkinter
 import streamlit as st
@@ -9,7 +7,6 @@ import seaborn as sns
 import pandas as pd
 from textblob import TextBlob
 from wordcloud import WordCloud
-import joblib,os
 import spacy
 from spacytextblob.spacytextblob import SpacyTextBlob
 import matplotlib.pyplot as plt
