@@ -1,10 +1,7 @@
-from idlelib.multicall import r
 import numpy as np
-from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.pipeline import Pipeline
 import tkinter
 import streamlit as st
 import plotly_express as px
