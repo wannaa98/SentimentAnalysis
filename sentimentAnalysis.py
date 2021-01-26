@@ -11,15 +11,9 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-
-
 #configuration
 st.set_option('deprecation.showfileUploaderEncoding',False)
 st.set_option('deprecation.showPyplotGlobalUse', False)
-
-#title of the app
-
-
 
 def text_analyzer(my_text):
     nlp = spacy.load('en_core_web_sm')
@@ -93,7 +87,6 @@ def main():
             feature_selection = st.sidebar.multiselect(label="Features to plot",
                                                options=numeric_cols)
 
-
             print(feature_selection)
 
             df_features = df[feature_selection]
@@ -154,7 +147,6 @@ def main():
 
             else:
 
-
                 st.success("Generating Word Cloud")
 
                 def gen_wordcloud():
@@ -200,7 +192,6 @@ def main():
                         return 'Positive'
 
                 df['Analysis'] = df['Polarity'].apply(getAnalysis)
-
                 return df
 
             df = Plot_Analysis()
@@ -264,8 +255,6 @@ def main():
             st.success("Generating Line plots")
             feature_selection = st.sidebar.multiselect(label="Features to plot",
                                                options=numeric_columns)
-
-
             print(feature_selection)
 
             df_features = df[feature_selection]
@@ -381,12 +370,10 @@ def main():
 
             st.pyplot(use_container_width=True)
 
-
     elif choice == "Sentiment Analyzer":
 
         st.title("Sentiment Analyzer"
                  "(Single dataset classification)")
-
 
         analyzer = SentimentIntensityAnalyzer()
         nlp = spacy.load('en_core_web_sm')
