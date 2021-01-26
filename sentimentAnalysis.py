@@ -10,15 +10,9 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-
-
 #configuration
 st.set_option('deprecation.showfileUploaderEncoding',False)
 st.set_option('deprecation.showPyplotGlobalUse', False)
-
-#title of the app
-
-
 
 def text_analyzer(my_text):
     nlp = spacy.load('en_core_web_sm')
@@ -92,7 +86,6 @@ def main():
             feature_selection = st.sidebar.multiselect(label="Features to plot",
                                                options=numeric_cols)
 
-
             print(feature_selection)
 
             df_features = df[feature_selection]
@@ -152,8 +145,6 @@ def main():
                 st.image(img)
 
             else:
-
-
                 st.success("Generating Word Cloud")
 
                 def gen_wordcloud():
@@ -220,7 +211,6 @@ def main():
             st.write(file_details)
             df = pd.read_csv(data_file)
 
-
         global numeric_columns
         global text_columns
 
@@ -263,7 +253,6 @@ def main():
             st.success("Generating Line plots")
             feature_selection = st.sidebar.multiselect(label="Features to plot",
                                                options=numeric_columns)
-
 
             print(feature_selection)
 
@@ -386,7 +375,6 @@ def main():
         st.title("Sentiment Analyzer"
                  "(Single dataset classification)")
 
-
         analyzer = SentimentIntensityAnalyzer()
         nlp = spacy.load('en_core_web_sm')
         spacy_text_blob = SpacyTextBlob()
@@ -412,7 +400,6 @@ def main():
             else:
                st.write("This is a Negative Message with" , round(doc._.sentiment.polarity,4)*-80+22.225643737,"% probability")
                st.balloons()
-
     else:
         st.title("Sentiment Analysis of restaurant review in Kuala Terengganu using KNN Algorithm")
         st.subheader("About")
